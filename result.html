@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<title>Les coccinelles sont des coléoptères</title>
+</head>
+
+<body>
+<div id="desert"></div>
+<p>Ton score : <span id="score"></span></p>
+<div class="container">
+ </div>
+
+
+
+
+<script>
+const score = Number(localStorage.getItem("score")) || 0;
+document.getElementById("score").textContent = score;
+</script>
+</body>
+</html>

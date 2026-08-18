@@ -1,0 +1,112 @@
+body {
+  font-family: "Trebuchet MS", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  background: linear-gradient(
+    180deg,
+    #ffe0a3 0%,
+    #f4b860 40%,
+    #d97a2b 100%
+  );
+}
+
+body::before {
+  content: "☀️";
+  position: fixed;
+  top: 40px;
+  right: 60px;
+  font-size: 80px;
+  animation: sunPulse 3s infinite ease-in-out;
+  opacity: 0.9;
+}
+
+@keyframes sunPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2) rotate(10deg); }
+}
+
+
+.container {
+  background: #fff2d6;
+  padding: 35px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 550px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  text-align: center;
+  border: 4px dashed #b8742f;
+
+  transform: rotate(-1deg);
+  animation: floatBox 4s infinite ease-in-out;
+  z-index: 2;
+  position: relative;
+}
+
+@keyframes floatBox {
+  0%, 100% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+}
+
+h1 {
+  color: #8b4513;
+  font-size: 32px;
+  text-shadow: 2px 2px #ffd9a0;
+}
+
+button {
+  background: linear-gradient(135deg, #ffb347, #ff7e5f);
+  border: none;
+  padding: 15px 25px;
+  margin: 10px;
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 6px 0 #b85e16;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05) rotate(1deg);
+}
+
+button:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #b85e16;
+}
+
+a {
+  color: #8b4513;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+.fun-text {
+  margin-top: 15px;
+  color: #7a4d22;
+  font-style: italic;
+}
+
+.camel {
+  position: fixed;
+  left: 110vw;   
+  top: 50%;
+  animation: walkLeft linear infinite;
+  pointer-events: none;
+}
+
+@keyframes walkLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-140vw); }
+}

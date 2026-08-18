@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<title>Quiz</title>
+</head>
+
+<body>
+
+<div id="desert"></div>
+
+<div class="container">
+  <h1>Tu te demandes combien de chameaux tu vaux ?</h1>
+
+  <button onclick="startQuiz()">Oui</button>
+</div>
+
+<script>
+function startQuiz() {
+
+    console.log("AVANT RESET :", localStorage.getItem("score"));
+
+    localStorage.setItem("score", "0");
+
+    console.log("APRÈS RESET :", localStorage.getItem("score"));
+
+    window.location.href = "q1.html";
+}
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
